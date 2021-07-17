@@ -9,6 +9,24 @@ class Info( models.Model):
     email = models.EmailField( max_length=120, primary_key = True)
     password = models.CharField( max_length=120)
 
+
+# class Data( models.Model):
+#     file_name = models.FileField(upload_to= 'datas')
+#     uploaded = models.DateTimeField(auto_now_add=True)
+#     activated = models.BooleanField(default=False)
+#
+#     def  __str__(self):
+#         return  f"File id: {self.id}"
+
+
+
+
+
+
+
+
+
+
 class Data( models.Model):
 
     model = models.CharField(max_length=120)

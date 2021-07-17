@@ -2,13 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.template.context_processors import csrf
-from .models import Info
+from .models import Info, Data
 from .forms import InfoForm
 from django import forms
 from django.contrib import messages
 import pandas as pd
 import json
-
 
 def demo(request):
     return render(request, 'cars/help.html')
@@ -113,7 +112,8 @@ def search(request):
 
 def search_in(request):
 
-    df_u = pd.read_csv(r'C:/Users/sanas/Desktop/Untitled Folder/New folder/finalcar.csv')
+    df_u = pd.read_csv('https://raw.githubusercontent.com/AmanRaoSanas/dataset/main/finalcar.csv')
+
 
     output = []
 
@@ -144,7 +144,6 @@ def search_in(request):
 
     if brnd == []:
         brnd = ['datsun', 'ford', 'honda', 'hyundai', 'isuzu', 'jeep', 'kia','mahindra', 'maruti suzuki', 'maruti suzuki r', 'mg', 'nissan','renault', 'skoda', 'tata', 'toyota', 'volkswagen']
-
 
     df = df_u[df_u['make'].isin(brnd) & df_u['fuel_type'].isin(fuel) & df_u['type'].isin(tra) & df_u['body_type'].isin(bdy)]
     df2 = df.loc[df_u['price'] > minr]
