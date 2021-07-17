@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% extends "cars/nav.html" %}
+<title>MUV</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+{% load static %}
+{% block c %}
+<div class="container">
+<h2>MUV</h2>
+<p style="line-height: 200%;font-size:20px;font-family:helvetica;">An MUV (Multi Utility Vehicle) or an MPV (Multi Purpose Vehicle) is a van-shaped vehicle that can be used to ferry passengers and cargo as it offers plenty of storage and seating space.</p>
+<br>
+<img src="{% static 'cars/muv.png' %}" class="img-thumbnail" alt="Cinque Terre" width="600" height="400">
+</div>
+{% endblock %}
+</body>
+</html>

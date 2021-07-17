@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% extends "cars/nav.html" %}
+
+
+<!--    embeded video -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <!-- dropdown list Bootstrap CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-                    JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>search car</title>
+</head>
+
+<body>
+ {% block c %}
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css"
+    rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+
+  <!-- search area  -->
+  <form action="search_in" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+
+      <div class="col-md-6" style="width: 25%;">
+        <label class="control-label" for="fuel type">Fuel type</label>
+        <div class="input-group">
+          <select class="selectpicker show-tick" name="fuel" multiple >
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+            <option value="cng">CNG</option>
+            <option value="electric">Electric</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-6" style="width: 25%;">
+        <label class="control-label" for="Body type">Body type</label>
+        <div class="input-group">
+          <select class="selectpicker show-tick" name="body" multiple>
+            <option value="hatchback">Hatchback</option>
+            <option value="sedan">Sedan</option>
+            <option value="mpv">MPV</option>
+            <option value="muv">MUV</option>
+            <option value="suv">SUV</option>
+            <option value="crossover">Crossover</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-6" style="width: 25%;">
+        <label class="control-label" for="Transmission">Transmission</label>
+        <div class="input-group">
+          <select class="selectpicker show-tick" name="trans" multiple>
+            <option value="manual">MANUAL</option>
+            <option value="automatic">AUTOMATIC</option>
+            <option value="cvt">CVT</option>
+            <option value="amt">AMT</option>
+          </select>
+        </div>
+      </div>
+
+
+
+    <div class="col-md-6" style="width: 25%;">
+        <label class="control-label" for="Brand name">Brand name</label>
+        <div class="input-group">
+          <select class="selectpicker show-tick" name="brand" multiple>
+            <option value="datsun">Datsun</option>
+            <option value="ford">Ford</option>
+            <option value="honda">Honda</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="jeep">Jeep</option>
+            <option value="kia">Kia</option>
+            <option value="mahindra">Mahindra</option>
+            <option value="maruti suzuki">Maruti Suzuki</option>
+            <option value="mg">Mg</option>
+            <option value="nissan">Nissan</option>
+            <option value="renault">Renault</option>
+            <option value="skoda">Skoda</option>
+            <option value="tata">Tata</option>
+            <option value="toyota">Toyota</option>
+            <option value="volkswagen">Volkswagen</option>
+          </select>
+        </div>
+      </div>
+        <br><br>
+
+
+        <br><br><br>
+     <div class="col-md-6" style="width: 25%;">
+    <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Rs</span>
+    <span class="input-group-text">0.00</span>
+  </div>
+   <input id="from" name="from" type="text" class="form-control mb-0">
+            <label for="from">Rs. Min</label>
+
+
+<div class="input-group-prepend">
+    <span class="input-group-text">Rs</span>
+    <span class="input-group-text">0.00</span>
+  </div>
+   <input id="to" name="to" type="text" class="form-control mb-0">
+            <label for="to">Rs. Max</label>
+  </div>
+</div>
+    </div>
+
+        <br><br><br><br><br><br><br><br><br>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success" >search</button>
+    </div>
+
+
+  </form>
+ {% endblock %}
+</body>
+
+</html>

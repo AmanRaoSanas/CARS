@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% extends "cars/nav.html" %}
+<title>Sedan</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+{% load static %}
+{% block c %}
+<div class="container">
+<h2>Sedan</h2>
+<p style="line-height: 200%;font-size:20px;font-family:helvetica;">A sedan, or saloon is a passenger car in a three-box configuration with separate compartments for engine, passenger, and cargo. Sedan's first recorded use as a name for a car body was in 1912</p>
+<br>
+<img src="{% static 'cars/sedan.jpg' %}" class="img-thumbnail" alt="Cinque Terre" width="600" height="400">
+</div>
+{% endblock %}
+</body>
+</html>

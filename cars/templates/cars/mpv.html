@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% extends "cars/nav.html" %}
+<title>MPV</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+{% load static %}
+{% block c %}
+<div class="container">
+<h2>MPV</h2>
+<p style="line-height: 200%;font-size:20px;font-family:helvetica;">MPV (Multi Purpose Vehicle) also known as MUV (Multi Utility Vehicle) is a vehicle which looks like a van and is intended for personal use in India. They have forward mounted engines and are taller than sedans and hatchbacks. More than visual appeal, these vehicles concentrate more on the functionality purpose.</p>
+<br>
+<img src="{% static 'cars/mpv.jpg' %}" class="img-thumbnail" alt="Cinque Terre" width="500" height="400">
+<img src="{% static 'cars/mpv.png' %}" class="img-thumbnail" alt="Cinque Terre" width="500" height="400">
+</div>
+{% endblock %}
+</body>
+</html>

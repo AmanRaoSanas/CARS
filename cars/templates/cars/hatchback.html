@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% extends "cars/nav.html" %}
+<title>Hatchback</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+{% load static %}
+{% block c %}
+<div class="container">
+<h2>Hatchback</h2>
+<p style="line-height: 200%;font-size:20px;font-family:helvetica;">A hatchback is a car body configuration with a rear door that swings upward to provide access to a cargo area. Hatchbacks may feature fold-down second row seating, where the interior can be reconfigured to prioritize passenger or cargo volume. Hatchbacks may feature two- or three-box design.</p>
+<br>
+<img src="{% static 'cars/hatchback.jpg' %}" class="img-thumbnail" alt="Cinque Terre" width="600" height="400">
+</div>
+{% endblock %}
+</body>
+</html>

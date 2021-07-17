@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% extends "cars/nav.html" %}
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+{% load static %}
+{% block c %}
+
+<div class="container">
+  <h2>Image Gallery</h2>
+  <div class="row">
+    <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="hatchback"  alt="Lights">
+          <img src="{% static 'cars/hatchback.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>HATCHBACK</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="sedan"  alt="Lights">
+          <img src="{% static 'cars/sedan.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>SEDAN</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="suv" >
+          <img src="{% static 'cars/suv.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>SUV</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+   <div class="row">
+    <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="crossover">
+          <img src="{% static 'cars/cross.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>CROSSOVER</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+     <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="muv">
+          <img src="{% static 'cars/muv.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>MUV</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+     <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="mpv">
+          <img src="{% static 'cars/mpv.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>MPV</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+     <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="amt">
+          <img src="{% static 'cars/AMT.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>AMT</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+     <div class="col-md-4"  style="padding:15px">
+      <div class="thumbnail">
+        <a href="cvt">
+          <img src="{% static 'cars/CVT.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>CVT</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+     <div class="col-md-4" style="padding:15px">
+      <div class="thumbnail">
+        <a href="auto">
+          <img src="{% static 'cars/auto.jpg' %}" alt="Lights" style="width:100%">
+          <div class="caption">
+            <H5><CENTER>Automatic</H5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+   </div>
+  </div>
+
+{% endblock %}
+</body>
+</html>

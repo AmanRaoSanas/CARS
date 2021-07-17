@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% extends "cars/nav.html" %}
+<title>AMT</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+{% load static %}
+{% block c %}
+<div class="container">
+<h2>AMT</h2>
+<p style="line-height: 200%;font-size:20px;font-family:helvetica;">Automated manual transmission (AMT), also known as a clutchless manual, denotes a type of multi-speed motor vehicle transmission system that is closely based on the mechanical design and build of a conventional manual transmission, but uses automation to operate either the clutch, and/or the gear shifting.</p>
+<br>
+<img src="{% static 'cars/amt.jpg' %}" class="img-thumbnail" alt="Cinque Terre" width="600" height="400">
+</div>
+{% endblock %}
+</body>
+</html>

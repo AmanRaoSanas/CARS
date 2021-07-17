@@ -1,0 +1,53 @@
+<!-- Write HTML code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TableView - Startup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "cars/nav.html" %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% block c %}
+<div class="container">
+<table class="table table">
+	<thead class="thead-dark">
+	<tr>
+        <th>Make</th>
+		<th>Model</th>
+        <th>Variant</th>
+		<th>ex-showroom_price</th>
+        <th>Fuel</th>
+        <th>Body type</th>
+        <th>Transmission </th>
+		<th>Official Links</th>
+		<th>Images</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- jinja2 Technique -->
+	{% if d %}
+	{% for i in d %}
+	<tr>
+        <td>{{i.make}}</td>
+        <td>{{i.model}}</td>
+        <td>{{i.Variant}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.fuel_type}}</td>
+        <td>{{i.body_type}}</td>
+        <td>{{i.type}}</td>
+        <td><a href={{i.Link}}>{{i.Link}}</td>
+		<td><img src={{ i.image_link }} class="d-block w-1" alt="image not available" style="width:100%" ></td>
+	</tr>
+	{% endfor %}
+	{% endif %}
+	</tbody>
+</table>
+</div>
+{% endblock %}
+</body>
+</html>

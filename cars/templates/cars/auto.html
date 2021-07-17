@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% extends "cars/nav.html" %}
+<title>Automatic</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+{% load static %}
+{% block c %}
+<div class="container">
+<h2>Automatic</h2>
+<p style="line-height: 200%;font-size:20px;font-family:helvetica;">An automatic transmission is a multi-speed transmission used in motor vehicles that does not require any driver input to change gears under normal driving ...
+‎Hydraulic automatics</p>
+<br>
+<img src="{% static 'cars/auto.jpg' %}" class="img-thumbnail" alt="Cinque Terre" width="600" height="400">
+</div>
+{% endblock %}
+</body>
+</html>
