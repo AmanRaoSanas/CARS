@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.template.context_processors import csrf
-from .models import Info, Data
+from .models import Info
 from .forms import InfoForm
 from django import forms
 from django.contrib import messages

@@ -23,7 +23,7 @@ urlpatterns = [
     path('cvt', views.cvt, name='cvt'),
     path('auto', views.auto, name='auto'),
     path('crossover', views.crossover, name='crossover'),
-
+    path('crossover', views.crossover, name='crossover'),
 
     path('demo', views.demo, name='demo'),
 ]
