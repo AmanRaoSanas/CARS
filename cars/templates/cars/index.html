@@ -21,6 +21,22 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
   <!-- Bootstrap Footer CSS  end-->
   <title>C@RS</title>
+
+  <!--watson assitant-->
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "a2c462fb-3502-44f6-b588-fcc4b94dc2d4", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "95fd5574-930a-463a-85d2-4b8369982780", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
 </head>
 {% extends "cars/nav.html" %}
 
@@ -57,7 +73,7 @@
   </div></div>
 
 
-  <div style="text-align:center; margin:10px "><a style="width:250px" class="btn btn-info" href="search" >Find your car</a></div>
+  <div style="text-align:center; margin:10px "><a style="width:250px" class="btn btn-info" href="search" >Find your dream car</a></div>
 
 
 {% endblock %}
