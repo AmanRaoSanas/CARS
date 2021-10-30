@@ -69,7 +69,7 @@ def forget_in(request):
 
     server = sm.SMTP('smtp.gmail.com: 587')
     server.starttls()
-    server.login("deltashadow16@gmail.com", "12345!@#$%")
+    server.login("deltashadow16@gmail.com", "**********")
 
     server.sendmail(msg['From'], msg['To'], msg.as_string())
     server.quit()
